@@ -1,24 +1,22 @@
 import React, { useState } from "react";
-import MainHeader from "./components/MainHeader";
-import KakaoMap from "./components/KakaoMap";
-import MainContent from "./components/MainContent";
-import MainFooter from "./components/MainFooter";
+
 import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Comment from "./pages/Comment";
+import Home from "./pages/Home";
 
 const App = () => {
   const [reservationDate, setReservationDate] = useState(new Date());
 
   return (
-    <div className="App">
-      <MainHeader />
-      <KakaoMap />
-      <MainContent
-        placeText={"마곡"}
-        reservationDate={reservationDate}
-        reservationTime={reservationDate}
-      />
-      <MainFooter />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/comment" element={<Comment />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 };
 export default App;
