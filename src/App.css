@@ -30,15 +30,41 @@ body {
 .MainHeader {
   display: flex;
   justify-content: center;
+  padding-top: 10px;
+}
+.MainHeaderText {
+  font-size: 25px;
 }
 
 .mapcontainer {
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 .map {
   width: 100%;
   height: 300px;
+}
+.map-direct-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.map-direct-btn-kakao {
+  width: 33%;
+  height: 50%;
+  padding-top: 10px;
+}
+.map-direct-btn-kakao button {
+  width: 100%;
+  background-color: white;
+  border: 1px solid #f6f6f6;
+  border-radius: 10px;
+  padding: 0px;
+}
+.map-direct-btn-kakao img {
+  width: 70%;
+  height: 20%;
 }
 
 .MainContent-container {

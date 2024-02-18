@@ -12,15 +12,15 @@ const Home = () => {
 
   return (
     <div className="Home">
-      <MainHeader text={"세젤귀 전도영군의 잘가라(가지마)파티에 초대합니다."} />
+      <MainHeader text={"세젤귀 전도영군의 잘가라(가지마)파티에 초대합니다❤"} />
       <KakaoMap />
       <MainContent />
       <MainCalendar />
       <MainFooter />
-      <MyButton
+      {/* <MyButton
         text={"도련님에게 한마디"}
         onClick={() => navigate(`/comment`)}
-      />
+      /> */}
     </div>
   );
 };

@@ -1,10 +1,10 @@
 import React from "react";
 
-const MainHeader = ({ text }) => {
+const MainHeader = ({ text, introduceText }) => {
   return (
     <div className="MainHeader">
       <div>
-        <h4>{text}</h4>
+        <h4 className="MainHeaderText">{text}</h4>
       </div>
     </div>
   );

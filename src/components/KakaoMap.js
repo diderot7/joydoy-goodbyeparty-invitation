@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const KakaoMap = () => {
   const { kakao } = window;
@@ -17,9 +19,28 @@ const KakaoMap = () => {
     marker.setMap(map);
   }, []);
 
+  // <Link to="kakaomap://look?p=37.537229,127.00551"></Link>
   return (
     <div className="mapcontainer">
       <div id="map" className="map"></div>
+      <div className="map-direct-btn">
+        <div className="map-direct-btn-kakao">
+          <Link to="https://map.kakao.com/link/to/카카오판교오피스,37.402056,127.108212">
+            <button>
+              <img src={`${process.env.PUBLIC_URL}/kakao_map.jpg`} />
+            </button>
+          </Link>
+        </div>
+
+        <div>
+          <Link to="https://map.kakao.com/link/to/카카오판교오피스,37.402056,127.108212">
+            <button>s</button>
+          </Link>
+        </div>
+        <div>
+          <button>s</button>
+        </div>
+      </div>
     </div>
   );
 };
